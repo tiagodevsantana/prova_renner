@@ -1,0 +1,51 @@
+Desenvolva, uma automação de testes para o e-commerce: http://automationpractice.com/.
+O projeto deve conter, pelo menos, um cenário de teste para a seguinte História do Usuário:
+
+*******************************************************************************************
+
+História do Usuário #1:
+Como um cliente cadastrado no automationpractice.com
+Eu quero fazer a compra de ao menos três produtos
+Para que eu possa estar bem vestida
+
+********************************************************************************************
+Cenário BDD criar usuário 
+
+[CT01] - Criar usuário na página do automationpractice
+Funcionalidade: Criar usuário na página automationpractice
+Cenário: O usuário irá criar login e senha na página
+
+Pré condições: N/A
+
+Dado acessar o site https://automationpractice.com
+Quando clicar em Sign In
+E preencher o campo "create an account" com email pessoal
+E clicar em "create an account"
+E preencher todos os campos da pagina "Your Personal Information"
+E clicar em "Register"
+Então deverá criar usuário com sucesso
+
+****************************************************************************************************
+
+Cenário BDD Realizar compras na págida
+
+[CT02] - Realizar compras na página automationpractice.com
+Funcionalidade: Realizar compras na página da automationpractice
+Cenário: O usuário realizará compras na página
+
+Pré condições: Estar logado na página
+
+Dado o usuário logado na página
+Quando clicar na peça desejada
+E clicar em "quantidade"
+E clicar em "tamanho"
+E clicar em "cor"
+E clicar em "Add to cart"
+E clicar em "Proceed to checkout" 3x
+E clicar em "I agree to the terms of service and will adhere to them unconditionally. (Read the Terms of Service)"
+E clicar em "Proceed to checkout" 
+E clicar na opção de pagamento
+Então deverá finalizar a compra
+
+
+
